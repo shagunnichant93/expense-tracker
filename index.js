@@ -28,3 +28,11 @@ console.log("Food expenses:");
 foodexpenses.forEach((expense) => {
   console.log(`${expense.title}: ₹${expense.amount}`);
 });
+
+
+//Transform data with map
+const titles = expenses.map((expense) => expense.title);
+console.log("Expense titles:");
+titles.forEach((title) => {
+  console.log(title);
+});
