@@ -20,3 +20,11 @@ const total = expenses.reduce((sum, expense) => {
   return sum + expense.amount;
 }, 0);
 console.log(`Total expenses: ₹${total}`);
+
+
+//Filter by category
+const foodexpenses = expenses.filter((expense) => expense.category === "food");
+console.log("Food expenses:");
+foodexpenses.forEach((expense) => {
+  console.log(`${expense.title}: ₹${expense.amount}`);
+});
