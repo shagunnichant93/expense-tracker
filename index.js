@@ -36,3 +36,25 @@ console.log("Expense titles:");
 titles.forEach((title) => {
   console.log(title);
 });
+
+//Add new expense
+function addExpense(title, amount, category) {
+  const newExpense = {
+    id: Date.now(),
+    title: title,
+    amount: amount,
+    category: category,
+  };
+
+  expenses = [...expenses, newExpense];  
+  console.log(`Added new expense: ${title}: ₹${amount}`);
+}
+addExpense("Coffee", 120, "food");
+
+//delete expense by id
+function deleteExpense(id) {
+  expenses = expenses.filter((expense) => expense.id !== id);
+}
+deleteExpense(2);
+
+console.log(expenses);
