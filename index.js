@@ -58,3 +58,11 @@ function deleteExpense(id) {
 deleteExpense(2);
 
 console.log(expenses);
+
+//Group by category 
+const totalsByCategory = expenses.reduce((acc, expense) => {
+  acc[expense.category] = (acc[expense.category] || 0) + expense.amount;
+  return acc;
+}, {});
+
+console.log(totalsByCategory);
